@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe | 2 Player Game</title>
+    <meta name="description" content="Play Tic-Tac-Toe with a friend. Get three in a row to win!" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Animated Background -->
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Main App -->
+    <div class="app">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <span class="logo-x">X</span>
+          <span class="logo-dot">&middot;</span>
+          <span class="logo-o">O</span>
+        </div>
+        <h1 class="title">Tic&#8209;Tac&#8209;Toe</h1>
+        <p class="subtitle">2 Player Game</p>
+      </header>
+
+      <!-- Score Board -->
+      <div class="scoreboard">
+        <div class="score-card" id="score-card-x">
+          <div class="score-label">
+            <span class="score-mark x-mark">X</span>
+            <span>Player X</span>
+          </div>
+          <div class="score-value" id="score-val-x">0</div>
+        </div>
+        <div class="score-card draws">
+          <div class="score-label">Draws</div>
+          <div class="score-value" id="score-val-draw">0</div>
+        </div>
+        <div class="score-card" id="score-card-o">
+          <div class="score-label">
+            <span class="score-mark o-mark">O</span>
+            <span>Player O</span>
+          </div>
+          <div class="score-value" id="score-val-o">0</div>
+        </div>
+      </div>
+
+      <!-- Turn Indicator -->
+      <div class="turn-indicator" id="turn-indicator">
+        <span class="turn-mark x-turn" id="turn-mark">X</span>
+        <span class="turn-text" id="turn-text">'s turn</span>
+      </div>
+
+      <!-- Game Board -->
+      <div class="board" id="board" role="grid" aria-label="Tic-Tac-Toe board">
+        <button class="cell" id="cell-0" data-index="0" role="gridcell" aria-label="Cell 1"></button>
+        <button class="cell" id="cell-1" data-index="1" role="gridcell" aria-label="Cell 2"></button>
+        <button class="cell" id="cell-2" data-index="2" role="gridcell" aria-label="Cell 3"></button>
+        <button class="cell" id="cell-3" data-index="3" role="gridcell" aria-label="Cell 4"></button>
+        <button class="cell" id="cell-4" data-index="4" role="gridcell" aria-label="Cell 5"></button>
+        <button class="cell" id="cell-5" data-index="5" role="gridcell" aria-label="Cell 6"></button>
+        <button class="cell" id="cell-6" data-index="6" role="gridcell" aria-label="Cell 7"></button>
+        <button class="cell" id="cell-7" data-index="7" role="gridcell" aria-label="Cell 8"></button>
+        <button class="cell" id="cell-8" data-index="8" role="gridcell" aria-label="Cell 9"></button>
+      </div>
+
+      <!-- Action Button -->
+      <button class="btn-restart" id="btn-restart">&#x1F504; Restart Game</button>
+
+    </div>
+
+    <!-- Result Overlay -->
+    <div class="overlay hidden" id="result-overlay">
+      <div class="result-card">
+        <div class="result-emoji" id="result-emoji">&#127881;</div>
+        <h2 class="result-title" id="result-title">Player X Wins!</h2>
+        <p class="result-sub" id="result-sub">Congratulations!</p>
+        <div class="result-actions">
+          <button class="btn-result primary" id="btn-play-again">Play Again</button>
+          <button class="btn-result secondary" id="btn-reset-scores">Reset Scores</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
