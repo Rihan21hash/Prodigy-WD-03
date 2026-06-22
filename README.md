@@ -7,7 +7,7 @@ A responsive and interactive Tic Tac Toe game built using **HTML**, **CSS**, and
 ## Live Demo
 
 **Website:**  
-https://rihan21hash.github.io/PRODIGY-WD-03/
+https://rihan21hash.github.io/Prodigy-WD-03/
 
 ---
 
